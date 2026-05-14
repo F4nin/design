@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(brew install *)",
-      "Bash(open *)"
+      "Bash(open *)",
+      "WebFetch(domain:www.mossfloralfw.com)",
+      "WebFetch(domain:luurahotels.com)"
     ]
   }
 }
