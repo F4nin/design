@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Роза Ред Наоми — ЦВЕТИ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────── -->
+<nav class="nav nav--solid" id="mainNav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <svg class="nav__logo-leaf" viewBox="0 0 36 36" fill="none">
+        <path d="M18 4C18 4 8 10 8 20a10 10 0 0020 0C28 10 18 4 18 4z" fill="currentColor" opacity=".9"/>
+        <path d="M18 14v16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      ЦВЕТИ
+    </a>
+    <div class="nav__links">
+      <a href="index.html"    class="nav__link">Главная</a>
+      <a href="shop.html"     class="nav__link nav__link--active">Биржа цветов</a>
+      <a href="delivery.html" class="nav__link">Условия и доставка</a>
+      <a href="news.html"     class="nav__link">Акции</a>
+    </div>
+    <div class="nav__actions">
+      <a href="cabinet.html" class="nav__icon-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </a>
+      <a href="cabinet.html#cart" class="nav__icon-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="nav__badge">3</span>
+      </a>
+      <a href="login.html" class="btn btn--primary btn--sm">Войти</a>
+    </div>
+    <button class="nav__hamburger" id="hamburger">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ── MOBILE NAV ─────────────────────── -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav__close" id="mobileNavClose">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <nav class="mobile-nav__links">
+    <a href="index.html"    class="mobile-nav__link">Главная</a>
+    <a href="shop.html"     class="mobile-nav__link">Биржа цветов</a>
+    <a href="delivery.html" class="mobile-nav__link">Условия и доставка</a>
+    <a href="news.html"     class="mobile-nav__link">Акции</a>
+  </nav>
+  <div class="mobile-nav__actions">
+    <a href="login.html" class="btn btn--primary btn--full">Войти</a>
+  </div>
+</div>
+
+<div class="product-page">
+  <!-- Хлебные крошки -->
+  <div class="product-breadcrumb container">
+    <a href="index.html">Главная</a>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+    <a href="shop.html">Биржа цветов</a>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+    <span>Роза Ред Наоми</span>
+  </div>
+
+  <!-- ── ОСНОВНОЙ КОНТЕНТ ─────────────── -->
+  <div class="product__layout container">
+
+    <!-- ── ГАЛЕРЕЯ ─────────────────────── -->
+    <div class="product__gallery">
+      <div class="product__main-img" id="mainImg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".8"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0C17 6 12 2 12 2z" fill="rgba(107,122,74,.1)"/><path d="M12 10v12" stroke-linecap="round"/><path d="M9 16c1 1 2 1.5 3 1.5s2-.5 3-1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="product__thumbs">
+        <div class="product__thumb product__thumb--active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0C17 6 12 2 12 2z"/><path d="M12 10v12" stroke-linecap="round"/></svg>
+        </div>
+        <div class="product__thumb">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0C17 6 12 2 12 2z"/><path d="M12 10v12" stroke-linecap="round"/></svg>
+        </div>
+        <div class="product__thumb">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0C17 6 12 2 12 2z"/><path d="M12 10v12" stroke-linecap="round"/></svg>
+        </div>
+        <div class="product__thumb" style="background:var(--c-text); display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ИНФОРМАЦИЯ ─────────────────── -->
+    <div class="product__info">
+      <div class="product__badges">
+        <span class="badge badge--available">В наличии</span>
+        <span class="badge badge--new">Топ продаж</span>
+      </div>
+
+      <h1 class="product__name">Роза Ред Наоми</h1>
+      <div class="product__latin">Rosa 'Red Naomi' · Высокогорные плантации Эквадор</div>
+
+      <div class="product__price-block">
+        <span class="product__price">85 ₽</span>
+        <span class="product__price-note">за стебель (без НДС) · Минимальный заказ: 25 стеблей = 2 125 ₽</span>
+      </div>
+
+      <!-- Характеристики -->
+      <div class="product__specs">
+        <div class="product__spec">
+          <span class="product__spec-key">Наличие</span>
+          <span class="product__spec-val" style="color:var(--c-success);">В наличии на складе</span>
+        </div>
+        <div class="product__spec">
+          <span class="product__spec-key">Страна происхождения</span>
+          <span class="product__spec-val">🇪🇨 Эквадор</span>
+        </div>
+        <div class="product__spec">
+          <span class="product__spec-key">Садовник / Плантация</span>
+          <span class="product__spec-val">Rosas del Monte</span>
+        </div>
+        <div class="product__spec">
+          <span class="product__spec-key">Цвет</span>
+          <span class="product__spec-val" style="display:flex;align-items:center;gap:8px;">
+            <span style="width:16px;height:16px;border-radius:50%;background:#CC2222;display:inline-block;"></span>
+            Тёмно-красный
+          </span>
+        </div>
+        <div class="product__spec">
+          <span class="product__spec-key">Высота стебля</span>
+          <span class="product__spec-val">60 см</span>
+        </div>
+        <div class="product__spec">
+          <span class="product__spec-key">Стеблей в упаковке</span>
+          <span class="product__spec-val">25 шт.</span>
+        </div>
+        <div class="product__spec">
+          <span class="product__spec-key">Бутон</span>
+          <span class="product__spec-val">Крупный, 5–6 см</span>
+        </div>
+        <div class="product__spec">
+          <span class="product__spec-key">Дата поступления</span>
+          <span class="product__spec-val">18 декабря 2024</span>
+        </div>
+      </div>
+
+      <!-- Количество -->
+      <div class="product__qty-row">
+        <span class="product__qty-label">Количество упаковок:</span>
+        <div class="qty-ctrl">
+          <button class="qty-btn" id="qtyMinus">−</button>
+          <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="999">
+          <button class="qty-btn" id="qtyPlus">+</button>
+        </div>
+        <span style="font-size:.85rem; color:var(--c-text-light);" id="qtyTotal">= 25 стеблей</span>
+      </div>
+
+      <!-- Итого -->
+      <div style="padding:1rem 1.25rem; background:var(--c-cream); border-radius:var(--radius); margin-bottom:1.25rem; display:flex; justify-content:space-between; align-items:center;">
+        <span style="font-size:.88rem; color:var(--c-text-mid);">Итого:</span>
+        <span style="font-size:1.4rem; font-weight:700; color:var(--c-olive-dark);" id="totalPrice">2 125 ₽</span>
+      </div>
+
+      <!-- Действия -->
+      <div class="product__actions">
+        <a href="login.html" class="btn btn--primary" style="flex:1;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          Добавить в корзину
+        </a>
+        <button class="product__fav-btn" title="В избранное">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+      </div>
+
+      <div class="product__note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Для оформления заказа необходима <a href="login.html" style="color:var(--c-olive);font-weight:500;">регистрация</a>. Доставка только по расписанию поставок.
+      </div>
+
+      <!-- Доставка -->
+      <div style="margin-top:1.5rem; border:1px solid var(--c-border); border-radius:var(--radius-lg); overflow:hidden;">
+        <div style="padding:1rem 1.25rem; background:var(--c-warm-white); display:flex; gap:12px; align-items:center; border-bottom:1px solid var(--c-border);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--c-olive)" stroke-width="2" stroke-linecap="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <div>
+            <div style="font-weight:600; font-size:.9rem;">Самовывоз</div>
+            <div style="font-size:.78rem; color:var(--c-text-light);">Владивосток, ул. Фокина 12 · Бесплатно</div>
+          </div>
+        </div>
+        <div style="padding:1rem 1.25rem; background:var(--c-warm-white); display:flex; gap:12px; align-items:center;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--c-olive)" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <div style="font-weight:600; font-size:.9rem;">Доставка по ДВ</div>
+            <div style="font-size:.78rem; color:var(--c-text-light);">Расчёт стоимости на <a href="delivery.html" style="color:var(--c-olive);">странице доставки</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Менеджер -->
+      <div style="margin-top:1.25rem; padding:1.25rem; background:linear-gradient(135deg,var(--c-olive-dark),var(--c-olive-mid)); border-radius:var(--radius-lg); color:#fff; display:flex; gap:12px; align-items:center;">
+        <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--font-serif);font-size:1.2rem;color:#fff;">А</div>
+        <div>
+          <div style="font-size:.8rem; opacity:.75; margin-bottom:2px;">Ваш персональный менеджер</div>
+          <div style="font-weight:600;">Анастасия Петрова</div>
+          <a href="tel:+74232123456" style="font-size:.82rem; opacity:.85; display:flex; align-items:center; gap:4px; margin-top:3px; color:#fff;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.72A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006 6l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            +7 (423) 212-34-56
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ПОХОЖИЕ ТОВАРЫ ───────────────── -->
+  <div style="background:var(--c-cream); padding:5rem 0;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:2.5rem; text-align:left;">
+        <span class="caption" style="display:block; margin-bottom:.75rem;">Вам может понравиться</span>
+        <h2 style="font-size:2rem;">Похожие товары</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem;">
+        <!-- Mini cards -->
+        <a href="product.html" style="background:var(--c-warm-white); border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--c-border); transition:all .3s; display:block;">
+          <div style="aspect-ratio:1; background:linear-gradient(145deg,var(--c-olive-pale),var(--c-cream)); display:flex;align-items:center;justify-content:center;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--c-olive)" stroke-width="1" opacity=".4"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0C17 6 12 2 12 2z"/><path d="M12 10v10" stroke-linecap="round"/></svg>
+          </div>
+          <div style="padding:1rem;">
+            <div style="font-family:var(--font-serif);font-size:1.1rem;margin-bottom:3px;">Роза Пинк Флойд</div>
+            <div style="font-size:.75rem;color:var(--c-text-light);margin-bottom:.75rem;">🇪🇨 Эквадор</div>
+            <div style="font-weight:700;color:var(--c-olive-dark);">78 ₽ / стебель</div>
+          </div>
+        </a>
+        <a href="product.html" style="background:var(--c-warm-white); border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--c-border); transition:all .3s; display:block;">
+          <div style="aspect-ratio:1; background:linear-gradient(145deg,#F8D4E0,#FDE8EF); display:flex;align-items:center;justify-content:center;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#E07090" stroke-width="1" opacity=".4"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0C17 6 12 2 12 2z"/><path d="M12 10v10" stroke-linecap="round"/></svg>
+          </div>
+          <div style="padding:1rem;">
+            <div style="font-family:var(--font-serif);font-size:1.1rem;margin-bottom:3px;">Роза Роз Амазон</div>
+            <div style="font-size:.75rem;color:var(--c-text-light);margin-bottom:.75rem;">🇰🇪 Кения</div>
+            <div style="font-weight:700;color:var(--c-olive-dark);">92 ₽ / стебель</div>
+          </div>
+        </a>
+        <a href="product.html" style="background:var(--c-warm-white); border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--c-border); transition:all .3s; display:block;">
+          <div style="aspect-ratio:1; background:linear-gradient(145deg,#F0E4CC,#F8F0E0); display:flex;align-items:center;justify-content:center;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#B89A58" stroke-width="1" opacity=".4"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0C17 6 12 2 12 2z"/><path d="M12 10v10" stroke-linecap="round"/></svg>
+          </div>
+          <div style="padding:1rem;">
+            <div style="font-family:var(--font-serif);font-size:1.1rem;margin-bottom:3px;">Роза Карамель</div>
+            <div style="font-size:.75rem;color:var(--c-text-light);margin-bottom:.75rem;">🇨🇴 Колумбия</div>
+            <div style="font-weight:700;color:var(--c-olive-dark);">88 ₽ / стебель</div>
+          </div>
+        </a>
+        <a href="product.html" style="background:var(--c-warm-white); border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--c-border); transition:all .3s; display:block;">
+          <div style="aspect-ratio:1; background:linear-gradient(145deg,#EEF0F0,#F8F9F9); display:flex;align-items:center;justify-content:center;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1" opacity=".4"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0C17 6 12 2 12 2z"/><path d="M12 10v10" stroke-linecap="round"/></svg>
+          </div>
+          <div style="padding:1rem;">
+            <div style="font-family:var(--font-serif);font-size:1.1rem;margin-bottom:3px;">Роза Белая Лара</div>
+            <div style="font-size:.75rem;color:var(--c-text-light);margin-bottom:.75rem;">🇪🇨 Эквадор</div>
+            <div style="font-weight:700;color:var(--c-olive-dark);">95 ₽ / стебель</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /product-page -->
+
+<!-- ── FOOTER ─────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <span class="footer__logo">ЦВЕТИ</span>
+        <p class="footer__tagline">Оптовая продажа цветов для бизнеса Дальнего Востока</p>
+      </div>
+      <div>
+        <div class="footer__col-title">Разделы</div>
+        <div class="footer__links">
+          <a href="shop.html"     class="footer__link">Биржа цветов</a>
+          <a href="delivery.html" class="footer__link">Условия и доставка</a>
+          <a href="news.html"     class="footer__link">Акции</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Контакты</div>
+        <div class="footer__links">
+          <span class="footer__link">+7 (423) 212-34-56</span>
+          <span class="footer__link">info@cveti.ru</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Документы</div>
+        <div class="footer__links">
+          <a href="#" class="footer__link">Политика конфиденциальности</a>
+          <a href="#" class="footer__link">Публичная оферта</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2024 ЦВЕТИ. Все права защищены.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

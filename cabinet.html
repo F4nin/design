@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет — ЦВЕТИ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────── -->
+<nav class="nav nav--solid" id="mainNav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <svg class="nav__logo-leaf" viewBox="0 0 36 36" fill="none">
+        <path d="M18 4C18 4 8 10 8 20a10 10 0 0020 0C28 10 18 4 18 4z" fill="currentColor" opacity=".9"/>
+        <path d="M18 14v16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      ЦВЕТИ
+    </a>
+    <div class="nav__links">
+      <a href="index.html"    class="nav__link">Главная</a>
+      <a href="shop.html"     class="nav__link">Биржа цветов</a>
+      <a href="delivery.html" class="nav__link">Условия и доставка</a>
+      <a href="news.html"     class="nav__link">Акции</a>
+    </div>
+    <div class="nav__actions">
+      <a href="cabinet.html" class="nav__icon-btn" style="color:var(--c-olive);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </a>
+      <a href="cabinet.html#cart" class="nav__icon-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="nav__badge">3</span>
+      </a>
+    </div>
+    <button class="nav__hamburger" id="hamburger">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="cabinet-page">
+  <div class="container">
+    <div class="cabinet__layout">
+
+      <!-- ── САЙДБАР ─────────────────── -->
+      <aside class="cabinet__sidebar">
+        <div class="cabinet__nav">
+          <div class="cabinet__user">
+            <div class="cabinet__avatar">М</div>
+            <div class="cabinet__user-name">Мария Иванова</div>
+            <div class="cabinet__user-org">ИП Иванова М.С.</div>
+            <div class="cabinet__status">Серебряный партнёр</div>
+          </div>
+          <nav class="cabinet__menu">
+            <div class="cabinet__menu-item cabinet__menu-item--active" data-section="orders">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              История заказов
+            </div>
+            <div class="cabinet__menu-item" data-section="cart">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Корзина
+              <span class="cabinet__menu-badge">3</span>
+            </div>
+            <div class="cabinet__menu-item" data-section="favorites">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              Избранное
+            </div>
+            <div class="cabinet__menu-item" data-section="profile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              Профиль компании
+            </div>
+            <div class="cabinet__menu-item" data-section="manager">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+              Связь с менеджером
+            </div>
+            <div class="cabinet__menu-item" style="color:var(--c-error); margin-top:.5rem; border-top:1px solid var(--c-border);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+              Выйти
+            </div>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- ── ОСНОВНОЙ КОНТЕНТ ─────────── -->
+      <div class="cabinet__main">
+
+        <!-- ИСТОРИЯ ЗАКАЗОВ -->
+        <div class="cabinet__card" id="section-orders">
+          <div class="cabinet__card-title">
+            История заказов
+            <a href="shop.html">+ Новый заказ</a>
+          </div>
+
+          <!-- Заказ 1 -->
+          <div class="order-card">
+            <div class="order-card__head">
+              <div class="order-card__head-left">
+                <div class="order-card__id">Заказ #ЦВ-20241215-087</div>
+                <div class="order-card__date">15 декабря 2024 · 14:32</div>
+              </div>
+              <span class="badge badge--available">Доставлен</span>
+            </div>
+            <div class="order-card__body">
+              <div class="order-item">
+                <div class="order-item__img">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0C17 6 12 2 12 2z"/><path d="M12 10v10" stroke-linecap="round"/></svg>
+                </div>
+                <div class="order-item__info">
+                  <div class="order-item__name">Роза Ред Наоми, 60 см</div>
+                  <div class="order-item__qty">2 упаковки × 25 шт. = 50 стеблей</div>
+                </div>
+                <div class="order-item__price">4 250 ₽</div>
+              </div>
+              <div class="order-item">
+                <div class="order-item__img" style="background:linear-gradient(145deg,#F8D4E0,#FDE8EF);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#E07090" stroke-width="1.2"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0C17 6 12 2 12 2z"/><path d="M12 10v10" stroke-linecap="round"/></svg>
+                </div>
+                <div class="order-item__info">
+                  <div class="order-item__name">Тюльпан Принсесс, 50 см</div>
+                  <div class="order-item__qty">3 упаковки × 30 шт. = 90 стеблей</div>
+                </div>
+                <div class="order-item__price">3 780 ₽</div>
+              </div>
+            </div>
+            <div class="order-card__foot">
+              <div class="order-card__total">Итого: 8 030 ₽</div>
+              <button class="order-card__repeat">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+                Повторить заказ
+              </button>
+            </div>
+          </div>
+
+          <!-- Заказ 2 -->
+          <div class="order-card">
+            <div class="order-card__head">
+              <div class="order-card__head-left">
+                <div class="order-card__id">Заказ #ЦВ-20241210-052</div>
+                <div class="order-card__date">10 декабря 2024 · 09:15</div>
+              </div>
+              <span class="badge badge--transit">В обработке</span>
+            </div>
+            <div class="order-card__body">
+              <div class="order-item">
+                <div class="order-item__img" style="background:linear-gradient(145deg,#FFE8D0,#FFF3E8);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#E09050" stroke-width="1.2"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0C17 6 12 2 12 2z"/><path d="M12 10v10" stroke-linecap="round"/></svg>
+                </div>
+                <div class="order-item__info">
+                  <div class="order-item__name">Лилия восточная, 80 см</div>
+                  <div class="order-item__qty">5 упаковок × 10 шт. = 50 стеблей</div>
+                </div>
+                <div class="order-item__price">6 000 ₽</div>
+              </div>
+            </div>
+            <div class="order-card__foot">
+              <div class="order-card__total">Итого: 6 000 ₽</div>
+              <button class="order-card__repeat">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+                Повторить заказ
+              </button>
+            </div>
+          </div>
+
+          <!-- Предзаказ -->
+          <div class="order-card">
+            <div class="order-card__head">
+              <div class="order-card__head-left">
+                <div class="order-card__id">Предзаказ #ЦВ-20241208-PRE-14</div>
+                <div class="order-card__date">08 декабря 2024 · Поступление: 20 декабря</div>
+              </div>
+              <span class="badge badge--new">Предзаказ</span>
+            </div>
+            <div class="order-card__body">
+              <div class="order-item">
+                <div class="order-item__img" style="background:linear-gradient(145deg,#F8D4E0,#FDE8EF);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#E07090" stroke-width="1.2"><circle cx="12" cy="9" r="5"/><path d="M12 14v7" stroke-linecap="round"/></svg>
+                </div>
+                <div class="order-item__info">
+                  <div class="order-item__name">Пион розовый, 50 см</div>
+                  <div class="order-item__qty">10 упаковок × 5 шт. = 50 стеблей</div>
+                </div>
+                <div class="order-item__price">11 000 ₽</div>
+              </div>
+            </div>
+            <div class="order-card__foot">
+              <div style="font-size:.82rem; color:var(--c-text-light); display:flex; align-items:center; gap:6px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Ожидайте поставки 20 декабря из Голландии
+              </div>
+              <div class="order-card__total">Итого: 11 000 ₽</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- КОРЗИНА -->
+        <div class="cabinet__card" id="section-cart">
+          <div class="cabinet__card-title">
+            Корзина
+            <a href="shop.html">Продолжить покупки</a>
+          </div>
+
+          <!-- Таймер -->
+          <div class="cart-timer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Корзина будет обнулена через: <strong id="cartTimer">47:23</strong>
+          </div>
+
+          <!-- Товары в корзине -->
+          <div class="cart-item">
+            <div class="cart-item__img">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0C17 6 12 2 12 2z"/><path d="M12 10v10" stroke-linecap="round"/></svg>
+            </div>
+            <div class="cart-item__info">
+              <div class="cart-item__name">Роза Ред Наоми, 60 см · Эквадор</div>
+              <div class="cart-item__meta">85 ₽/стебель · упаковка 25 шт.</div>
+              <div class="qty-ctrl" style="margin-top:8px;">
+                <button class="qty-btn" style="width:30px;height:30px;font-size:1rem;">−</button>
+                <input type="number" class="qty-input" value="2" style="width:50px;font-size:.9rem;">
+                <button class="qty-btn" style="width:30px;height:30px;font-size:1rem;">+</button>
+              </div>
+            </div>
+            <div class="cart-item__price">4 250 ₽</div>
+            <button class="cart-item__remove" title="Удалить">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+
+          <div class="cart-item">
+            <div class="cart-item__img" style="background:linear-gradient(145deg,#FFD8D8,#FFE8E8);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#CC4444" stroke-width="1.2"><path d="M12 3C10 7 8 10 10 14M12 3C15 5 16 8 14 11M12 18v3" stroke-linecap="round"/></svg>
+            </div>
+            <div class="cart-item__info">
+              <div class="cart-item__name">Гвоздика Корональ, 60 см · Колумбия</div>
+              <div class="cart-item__meta">38 ₽/стебель · упаковка 20 шт.</div>
+              <div class="qty-ctrl" style="margin-top:8px;">
+                <button class="qty-btn" style="width:30px;height:30px;font-size:1rem;">−</button>
+                <input type="number" class="qty-input" value="1" style="width:50px;font-size:.9rem;">
+                <button class="qty-btn" style="width:30px;height:30px;font-size:1rem;">+</button>
+              </div>
+            </div>
+            <div class="cart-item__price">760 ₽</div>
+            <button class="cart-item__remove" title="Удалить">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+
+          <div class="cart-item">
+            <div class="cart-item__img" style="background:linear-gradient(145deg,#D0E8F0,#EAF5F9);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#4090B0" stroke-width="1.2"><circle cx="8" cy="8" r="2.5"/><circle cx="16" cy="8" r="2.5"/><circle cx="8" cy="16" r="2.5"/><circle cx="16" cy="16" r="2.5"/><path d="M12 12v8" stroke-linecap="round"/></svg>
+            </div>
+            <div class="cart-item__info">
+              <div class="cart-item__name">Гортензия синяя, 55 см · Колумбия</div>
+              <div class="cart-item__meta">185 ₽/стебель · упаковка 5 шт.</div>
+              <div class="qty-ctrl" style="margin-top:8px;">
+                <button class="qty-btn" style="width:30px;height:30px;font-size:1rem;">−</button>
+                <input type="number" class="qty-input" value="2" style="width:50px;font-size:.9rem;">
+                <button class="qty-btn" style="width:30px;height:30px;font-size:1rem;">+</button>
+              </div>
+            </div>
+            <div class="cart-item__price">1 850 ₽</div>
+            <button class="cart-item__remove" title="Удалить">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+
+          <!-- Итог -->
+          <div class="cart-summary">
+            <div class="cart-summary__row">
+              <span>Товары (3 позиции)</span>
+              <span>6 860 ₽</span>
+            </div>
+            <div class="cart-summary__row">
+              <span>Скидка партнёра (−5%)</span>
+              <span style="color:var(--c-success);">−343 ₽</span>
+            </div>
+            <div class="cart-summary__row">
+              <span>Доставка</span>
+              <span>рассчитывается</span>
+            </div>
+            <div class="cart-summary__row cart-summary__row--total">
+              <span>Итого</span>
+              <span>6 517 ₽</span>
+            </div>
+          </div>
+
+          <!-- Способ получения -->
+          <div style="margin-top:1.5rem;">
+            <div style="font-size:.85rem; font-weight:600; margin-bottom:.85rem;">Способ получения:</div>
+            <div class="delivery-opts">
+              <div class="delivery-opt delivery-opt--active" id="pickupBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="margin:0 auto .5rem;display:block;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <h4>Самовывоз</h4>
+                <p>ул. Фокина, 12</p>
+              </div>
+              <div class="delivery-opt" id="deliveryBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="margin:0 auto .5rem;display:block;"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                <h4>Доставка</h4>
+                <p>по ДВ регионам</p>
+              </div>
+            </div>
+
+            <!-- Форма доставки (скрытая) -->
+            <div class="delivery-form" id="deliveryForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Город</label>
+                  <select class="form-select">
+                    <option>Выберите город</option>
+                    <option>Владивосток</option>
+                    <option>Хабаровск</option>
+                    <option>Южно-Сахалинск</option>
+                    <option>Благовещенск</option>
+                    <option>Магадан</option>
+                    <option>Петропавловск-Камчатский</option>
+                    <option>Якутск</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Дата доставки</label>
+                  <input type="date" class="form-input">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Адрес доставки</label>
+                <input type="text" class="form-input" placeholder="Улица, дом, квартира">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Время доставки</label>
+                  <select class="form-select">
+                    <option>Первая половина дня (9:00-13:00)</option>
+                    <option>Вторая половина дня (13:00-18:00)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Контактный телефон</label>
+                  <input type="tel" class="form-input" placeholder="+7 (___) ___-__-__">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn--primary btn--full" style="margin-top:1.25rem; padding:16px;">
+            Оформить заказ
+          </button>
+          <div style="text-align:center; font-size:.78rem; color:var(--c-text-light); margin-top:.75rem;">
+            После оформления вы получите подтверждение на email с составом заказа
+          </div>
+        </div>
+
+        <!-- ПРОФИЛЬ -->
+        <div class="cabinet__card" id="section-profile">
+          <div class="cabinet__card-title">
+            Профиль компании
+          </div>
+
+          <!-- Статус лояльности -->
+          <div style="background:linear-gradient(135deg,var(--c-olive-dark),var(--c-olive-mid)); border-radius:var(--radius-lg); padding:1.5rem; margin-bottom:1.5rem; color:#fff; display:flex; gap:1.5rem; align-items:center;">
+            <div style="text-align:center; min-width:80px;">
+              <div style="font-size:2rem;">⭐</div>
+              <div style="font-size:.72rem; opacity:.8; text-transform:uppercase; letter-spacing:.1em; margin-top:.25rem;">Серебро</div>
+            </div>
+            <div>
+              <div style="font-weight:600; margin-bottom:.35rem;">Участник программы лояльности</div>
+              <div style="font-size:.85rem; opacity:.8; margin-bottom:.75rem;">Статус: Серебряный партнёр · Скидка 5% на все заказы</div>
+              <div style="background:rgba(255,255,255,.15); border-radius:40px; height:6px; width:240px; overflow:hidden;">
+                <div style="background:var(--c-gold); height:100%; width:60%;"></div>
+              </div>
+              <div style="font-size:.75rem; opacity:.7; margin-top:.4rem;">60 000 / 100 000 ₽ до статуса Золото</div>
+            </div>
+          </div>
+
+          <form>
+            <div style="font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.16em; color:var(--c-text-light); margin-bottom:1rem; padding-bottom:.5rem; border-bottom:1px solid var(--c-border);">Данные компании</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Название организации</label>
+                <input type="text" class="form-input" value="ИП Иванова М.С.">
+              </div>
+              <div class="form-group">
+                <label class="form-label">ИНН</label>
+                <input type="text" class="form-input" value="253812345678">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Регион</label>
+                <select class="form-select">
+                  <option selected>Приморский край</option>
+                  <option>Хабаровский край</option>
+                  <option>Амурская область</option>
+                  <option>Сахалинская область</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Вид деятельности</label>
+                <select class="form-select">
+                  <option selected>Цветочный магазин</option>
+                  <option>Флористическая студия</option>
+                  <option>Оформление мероприятий</option>
+                  <option>Другое</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.16em; color:var(--c-text-light); margin: 1.5rem 0 1rem; padding-bottom:.5rem; border-bottom:1px solid var(--c-border);">Контактное лицо</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">ФИО</label>
+                <input type="text" class="form-input" value="Иванова Мария Сергеевна">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Телефон</label>
+                <input type="tel" class="form-input" value="+7 (914) 312-45-67">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-input" value="m.ivanova@flowers.ru">
+            </div>
+
+            <button type="submit" class="btn btn--primary">Сохранить изменения</button>
+          </form>
+        </div>
+
+        <!-- ИЗБРАННОЕ -->
+        <div class="cabinet__card" id="section-favorites">
+          <div class="cabinet__card-title">
+            Избранное
+            <a href="shop.html">Перейти в каталог</a>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1rem;">
+            <div style="border:1.5px solid var(--c-border); border-radius:var(--radius-lg); overflow:hidden; transition:all .3s;">
+              <div style="aspect-ratio:1; background:linear-gradient(145deg,var(--c-olive-pale),var(--c-cream)); display:flex; align-items:center; justify-content:center;">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--c-olive)" stroke-width="1" opacity=".4"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0C17 6 12 2 12 2z"/><path d="M12 10v10" stroke-linecap="round"/></svg>
+              </div>
+              <div style="padding:.85rem;">
+                <div style="font-family:var(--font-serif);font-size:1.05rem;margin-bottom:3px;">Хризантема Аматист</div>
+                <div style="font-size:.75rem;color:var(--c-text-light);margin-bottom:.6rem;">🇰🇪 Кения · В наличии</div>
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                  <span style="font-weight:700;color:var(--c-olive-dark);">68 ₽</span>
+                  <button class="btn btn--primary btn--sm">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div style="border:1.5px solid var(--c-border); border-radius:var(--radius-lg); overflow:hidden;">
+              <div style="aspect-ratio:1; background:linear-gradient(145deg,#F8D4E0,#FDE8EF); display:flex; align-items:center; justify-content:center;">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#E07090" stroke-width="1" opacity=".4"><circle cx="12" cy="9" r="5"/><path d="M12 14v7" stroke-linecap="round"/></svg>
+              </div>
+              <div style="padding:.85rem;">
+                <div style="font-family:var(--font-serif);font-size:1.05rem;margin-bottom:3px;">Пион розовый</div>
+                <div style="font-size:.75rem;color:var(--c-text-light);margin-bottom:.6rem;">🇳🇱 Голландия · Акция</div>
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                  <span style="font-weight:700;color:var(--c-olive-dark);">220 ₽</span>
+                  <button class="btn btn--primary btn--sm">В корзину</button>
+                </div>
+              </div>
+            </div>
+            <div style="border:1.5px solid var(--c-border); border-radius:var(--radius-lg); overflow:hidden;">
+              <div style="aspect-ratio:1; background:linear-gradient(145deg,#D0E8F0,#EAF5F9); display:flex; align-items:center; justify-content:center;">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#4090B0" stroke-width="1" opacity=".4"><circle cx="8" cy="8" r="2.5"/><circle cx="16" cy="8" r="2.5"/><circle cx="8" cy="16" r="2.5"/><circle cx="16" cy="16" r="2.5"/><path d="M12 12v8" stroke-linecap="round"/></svg>
+              </div>
+              <div style="padding:.85rem;">
+                <div style="font-family:var(--font-serif);font-size:1.05rem;margin-bottom:3px;">Гортензия синяя</div>
+                <div style="font-size:.75rem;color:var(--c-text-light);margin-bottom:.6rem;">🇨🇴 Колумбия · В пути</div>
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                  <span style="font-weight:700;color:var(--c-olive-dark);">185 ₽</span>
+                  <button class="btn btn--ghost btn--sm">Предзаказ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /cabinet__main -->
+    </div><!-- /cabinet__layout -->
+  </div><!-- /container -->
+</div><!-- /cabinet-page -->
+
+<!-- ── FOOTER ─────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <span class="footer__logo">ЦВЕТИ</span>
+        <p class="footer__tagline">Оптовая продажа цветов для бизнеса Дальнего Востока</p>
+      </div>
+      <div>
+        <div class="footer__col-title">Разделы</div>
+        <div class="footer__links">
+          <a href="shop.html"     class="footer__link">Биржа цветов</a>
+          <a href="delivery.html" class="footer__link">Условия и доставка</a>
+          <a href="news.html"     class="footer__link">Акции</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Контакты</div>
+        <div class="footer__links">
+          <span class="footer__link">+7 (423) 212-34-56</span>
+          <span class="footer__link">info@cveti.ru</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Документы</div>
+        <div class="footer__links">
+          <a href="#" class="footer__link">Политика конфиденциальности</a>
+          <a href="#" class="footer__link">Публичная оферта</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2024 ЦВЕТИ. Все права защищены.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

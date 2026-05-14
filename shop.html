@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Биржа цветов — ЦВЕТИ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────── -->
+<nav class="nav nav--solid" id="mainNav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <svg class="nav__logo-leaf" viewBox="0 0 36 36" fill="none">
+        <path d="M18 4C18 4 8 10 8 20a10 10 0 0020 0C28 10 18 4 18 4z" fill="currentColor" opacity=".9"/>
+        <path d="M18 14v16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      ЦВЕТИ
+    </a>
+    <div class="nav__links">
+      <a href="index.html"    class="nav__link">Главная</a>
+      <a href="shop.html"     class="nav__link nav__link--active">Биржа цветов</a>
+      <a href="delivery.html" class="nav__link">Условия и доставка</a>
+      <a href="news.html"     class="nav__link">Акции</a>
+    </div>
+    <div class="nav__actions">
+      <a href="cabinet.html" class="nav__icon-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </a>
+      <a href="cabinet.html#cart" class="nav__icon-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="nav__badge">3</span>
+      </a>
+      <a href="login.html" class="btn btn--primary btn--sm">Войти</a>
+    </div>
+    <button class="nav__hamburger" id="hamburger">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ── MOBILE NAV ─────────────────────── -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav__close" id="mobileNavClose">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <nav class="mobile-nav__links">
+    <a href="index.html"    class="mobile-nav__link">Главная</a>
+    <a href="shop.html"     class="mobile-nav__link">Биржа цветов</a>
+    <a href="delivery.html" class="mobile-nav__link">Условия и доставка</a>
+    <a href="news.html"     class="mobile-nav__link">Акции</a>
+  </nav>
+  <div class="mobile-nav__actions">
+    <a href="login.html" class="btn btn--primary btn--full">Войти</a>
+  </div>
+</div>
+
+<div class="shop-page">
+
+  <!-- ── БАННЕР ──────────────────────── -->
+  <div class="shop__banner">
+    <div class="container">
+      <span class="caption" style="color:var(--c-olive-light); margin-bottom:.75rem; display:block;">Онлайн-каталог</span>
+      <h1>Биржа цветов</h1>
+      <p>Актуальный ассортимент для бронирования · Обновляется в реальном времени</p>
+    </div>
+  </div>
+
+  <!-- ── БЕГУЩАЯ СТРОКА АКЦИЙ ─────────── -->
+  <div class="shop__offers">
+    <div class="container" style="overflow:hidden;">
+      <div class="shop__offers-track">
+        <span class="shop__offer-item">Предзаказ к 8 Марта — до 15 февраля</span>
+        <span class="shop__offer-item">Новое поступление: тюльпаны Голландия</span>
+        <span class="shop__offer-item">Скидка 10% на первый заказ</span>
+        <span class="shop__offer-item">Розы Эквадор — поступление 18 декабря</span>
+        <span class="shop__offer-item">Поставка из Кении: среда, 20 декабря</span>
+        <span class="shop__offer-item">Предзаказ к 8 Марта — до 15 февраля</span>
+        <span class="shop__offer-item">Новое поступление: тюльпаны Голландия</span>
+        <span class="shop__offer-item">Скидка 10% на первый заказ</span>
+        <span class="shop__offer-item">Розы Эквадор — поступление 18 декабря</span>
+        <span class="shop__offer-item">Поставка из Кении: среда, 20 декабря</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ОСНОВНОЙ LAYOUT ──────────────── -->
+  <div class="container">
+    <div class="shop__layout">
+
+      <!-- ── ФИЛЬТРЫ ─────────────────── -->
+      <aside class="shop__sidebar">
+        <div class="shop__filters">
+          <div class="shop__filters-title">
+            Фильтры
+            <span class="filter-reset" id="filterReset">Сбросить</span>
+          </div>
+
+          <!-- Наличие -->
+          <div class="filter-group">
+            <span class="filter-group__label">Наличие</span>
+            <label class="filter-check">
+              <input type="checkbox" checked>
+              <span>В наличии</span>
+              <span class="count">142</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox">
+              <span>В пути</span>
+              <span class="count">67</span>
+            </label>
+            <label class="filter-check">
+              <input type="checkbox">
+              <span>Предзаказ</span>
+              <span class="count">38</span>
+            </label>
+          </div>
+
+          <div class="filter-divider"></div>
+
+          <!-- Тип цветка -->
+          <div class="filter-group">
+            <span class="filter-group__label">Тип цветка</span>
+            <label class="filter-check"><input type="checkbox" checked><span>Розы</span><span class="count">89</span></label>
+            <label class="filter-check"><input type="checkbox"><span>Тюльпаны</span><span class="count">34</span></label>
+            <label class="filter-check"><input type="checkbox"><span>Хризантемы</span><span class="count">28</span></label>
+            <label class="filter-check"><input type="checkbox"><span>Гвоздики</span><span class="count">21</span></label>
+            <label class="filter-check"><input type="checkbox"><span>Лилии</span><span class="count">18</span></label>
+            <label class="filter-check"><input type="checkbox"><span>Гортензии</span><span class="count">15</span></label>
+            <label class="filter-check"><input type="checkbox"><span>Пионы</span><span class="count">12</span></label>
+            <label class="filter-check"><input type="checkbox"><span>Горшечные</span><span class="count">44</span></label>
+          </div>
+
+          <div class="filter-divider"></div>
+
+          <!-- Страна -->
+          <div class="filter-group">
+            <span class="filter-group__label">Страна происхождения</span>
+            <label class="filter-check"><input type="checkbox" checked><span>Эквадор 🇪🇨</span><span class="count">98</span></label>
+            <label class="filter-check"><input type="checkbox"><span>Кения 🇰🇪</span><span class="count">54</span></label>
+            <label class="filter-check"><input type="checkbox"><span>Голландия 🇳🇱</span><span class="count">67</span></label>
+            <label class="filter-check"><input type="checkbox"><span>Китай 🇨🇳</span><span class="count">44</span></label>
+            <label class="filter-check"><input type="checkbox"><span>Колумбия 🇨🇴</span><span class="count">32</span></label>
+          </div>
+
+          <div class="filter-divider"></div>
+
+          <!-- Цвет -->
+          <div class="filter-group">
+            <span class="filter-group__label">Цвет</span>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:4px;">
+              <button class="color-swatch active" data-color="red"    style="width:28px;height:28px;border-radius:50%;background:#E05555;border:2px solid transparent;cursor:pointer;transition:.2s;" title="Красный"></button>
+              <button class="color-swatch"        data-color="white"  style="width:28px;height:28px;border-radius:50%;background:#F5F5F5;border:2px solid #ddd;cursor:pointer;transition:.2s;" title="Белый"></button>
+              <button class="color-swatch"        data-color="pink"   style="width:28px;height:28px;border-radius:50%;background:#F4A7B9;border:2px solid transparent;cursor:pointer;transition:.2s;" title="Розовый"></button>
+              <button class="color-swatch"        data-color="yellow" style="width:28px;height:28px;border-radius:50%;background:#F5C842;border:2px solid transparent;cursor:pointer;transition:.2s;" title="Жёлтый"></button>
+              <button class="color-swatch"        data-color="orange" style="width:28px;height:28px;border-radius:50%;background:#F0854A;border:2px solid transparent;cursor:pointer;transition:.2s;" title="Оранжевый"></button>
+              <button class="color-swatch"        data-color="purple" style="width:28px;height:28px;border-radius:50%;background:#9B6FCC;border:2px solid transparent;cursor:pointer;transition:.2s;" title="Фиолетовый"></button>
+              <button class="color-swatch"        data-color="cream"  style="width:28px;height:28px;border-radius:50%;background:#F0E4CC;border:2px solid #ddd;cursor:pointer;transition:.2s;" title="Кремовый"></button>
+              <button class="color-swatch"        data-color="green"  style="width:28px;height:28px;border-radius:50%;background:#5A8A4A;border:2px solid transparent;cursor:pointer;transition:.2s;" title="Зелёный"></button>
+            </div>
+          </div>
+
+          <div class="filter-divider"></div>
+
+          <!-- Высота -->
+          <div class="filter-group">
+            <span class="filter-group__label">Высота стебля</span>
+            <div class="filter-range">
+              <input type="range" min="40" max="100" value="80" id="heightRange">
+              <div class="filter-range__values">
+                <span>40 см</span>
+                <span id="heightVal">до 80 см</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-divider"></div>
+
+          <!-- Цена -->
+          <div class="filter-group">
+            <span class="filter-group__label">Цена за стебель</span>
+            <div class="filter-range">
+              <input type="range" min="20" max="500" value="300" id="priceRange">
+              <div class="filter-range__values">
+                <span>20 ₽</span>
+                <span id="priceVal">до 300 ₽</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn--primary btn--full" style="margin-top:.5rem;">Применить</button>
+        </div>
+      </aside>
+
+      <!-- ── КАТАЛОГ ─────────────────── -->
+      <div class="shop__main">
+
+        <!-- Тулбар -->
+        <div class="shop__toolbar">
+          <div class="shop__count">Найдено: <strong>247 товаров</strong></div>
+          <div class="shop__toolbar-right">
+            <div class="shop__view-toggle">
+              <button class="shop__view-btn shop__view-btn--active" id="gridViewBtn" title="Сетка">
+                <svg viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
+              </button>
+              <button class="shop__view-btn" id="listViewBtn" title="Список">
+                <svg viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="2" width="14" height="3" rx="1"/><rect x="1" y="7" width="14" height="3" rx="1"/><rect x="1" y="12" width="14" height="3" rx="1"/></svg>
+              </button>
+            </div>
+            <div class="shop__sort">
+              <label for="sortSelect">Сортировка:</label>
+              <select class="form-select" id="sortSelect">
+                <option>Популярные</option>
+                <option>По возрастанию цены</option>
+                <option>По убыванию цены</option>
+                <option>Новинки</option>
+                <option>Наличие на складе</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточки товаров -->
+        <div class="shop__grid" id="shopGrid">
+
+          <!-- Роза Ред Наоми -->
+          <div class="p-card">
+            <div class="p-card__img-wrap">
+              <div class="p-card__img-ph">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0C17 6 12 2 12 2z" fill="rgba(107,122,74,.15)"/><path d="M12 10v10M9 14l3 3 3-3" stroke-linecap="round"/></svg>
+                <span>Роза Ред Наоми</span>
+              </div>
+              <div class="p-card__badge">
+                <span class="badge badge--available">В наличии</span>
+              </div>
+              <button class="p-card__fav" title="В избранное">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </button>
+              <span class="p-card__country">🇪🇨 Эквадор</span>
+            </div>
+            <div class="p-card__body">
+              <div class="p-card__name">Роза Ред Наоми</div>
+              <div class="p-card__meta">60 см · 25 стеблей в упаковке</div>
+              <div class="p-card__footer">
+                <div class="p-card__price-wrap">
+                  <span class="p-card__price">85 ₽ / стебель</span>
+                  <span class="p-card__min">мин. 25 шт.</span>
+                </div>
+                <button class="p-card__add-btn" title="Добавить в корзину">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Тюльпан Голландия -->
+          <div class="p-card">
+            <div class="p-card__img-wrap">
+              <div class="p-card__img-ph" style="background:linear-gradient(145deg,#E8D4F0,#F5EEF8);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2C12 2 8 5 8 9a4 4 0 008 0C16 5 12 2 12 2z" fill="rgba(155,111,204,.1)"/><path d="M12 11v9" stroke-linecap="round"/></svg>
+                <span>Тюльпан Принсесс</span>
+              </div>
+              <div class="p-card__badge">
+                <span class="badge badge--transit">В пути</span>
+              </div>
+              <button class="p-card__fav">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </button>
+              <span class="p-card__country">🇳🇱 Голландия</span>
+            </div>
+            <div class="p-card__body">
+              <div class="p-card__name">Тюльпан Принсесс</div>
+              <div class="p-card__meta">50 см · 30 стеблей в упаковке</div>
+              <div class="p-card__footer">
+                <div class="p-card__price-wrap">
+                  <span class="p-card__price">42 ₽ / стебель</span>
+                  <span class="p-card__min">мин. 30 шт.</span>
+                </div>
+                <button class="p-card__add-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Хризантема Кения -->
+          <div class="p-card">
+            <div class="p-card__img-wrap">
+              <div class="p-card__img-ph" style="background:linear-gradient(145deg,#FFF3D0,#FFF9E6);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="10" r="3" fill="rgba(240,200,80,.2)"/><path d="M12 4v2M12 14v2M4 10H6M18 10h2M6.34 6.34l1.42 1.42M16.24 16.24l1.42 1.42M6.34 13.66l1.42-1.42M16.24 3.76l1.42 1.42" stroke-linecap="round"/><path d="M12 16v4" stroke-linecap="round"/></svg>
+                <span>Хризантема Аматист</span>
+              </div>
+              <div class="p-card__badge">
+                <span class="badge badge--available">В наличии</span>
+                <span class="badge badge--new" style="margin-top:4px;">Новинка</span>
+              </div>
+              <button class="p-card__fav p-card__fav--active">
+                <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </button>
+              <span class="p-card__country">🇰🇪 Кения</span>
+            </div>
+            <div class="p-card__body">
+              <div class="p-card__name">Хризантема Аматист</div>
+              <div class="p-card__meta">70 см · 10 стеблей в упаковке</div>
+              <div class="p-card__footer">
+                <div class="p-card__price-wrap">
+                  <span class="p-card__price">68 ₽ / стебель</span>
+                  <span class="p-card__min">мин. 10 шт.</span>
+                </div>
+                <button class="p-card__add-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Гортензия -->
+          <div class="p-card">
+            <div class="p-card__img-wrap">
+              <div class="p-card__img-ph" style="background:linear-gradient(145deg,#D0E8F0,#EAF5F9);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="8"  cy="8"  r="2.5" fill="rgba(80,160,200,.1)"/><circle cx="16" cy="8"  r="2.5" fill="rgba(80,160,200,.1)"/><circle cx="8"  cy="16" r="2.5" fill="rgba(80,160,200,.1)"/><circle cx="16" cy="16" r="2.5" fill="rgba(80,160,200,.1)"/><path d="M12 12v8" stroke-linecap="round"/></svg>
+                <span>Гортензия Синяя</span>
+              </div>
+              <div class="p-card__badge">
+                <span class="badge badge--transit">В пути</span>
+              </div>
+              <button class="p-card__fav">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </button>
+              <span class="p-card__country">🇨🇴 Колумбия</span>
+            </div>
+            <div class="p-card__body">
+              <div class="p-card__name">Гортензия синяя</div>
+              <div class="p-card__meta">55 см · 5 стеблей в упаковке</div>
+              <div class="p-card__footer">
+                <div class="p-card__price-wrap">
+                  <span class="p-card__price">185 ₽ / стебель</span>
+                  <span class="p-card__min">мин. 5 шт.</span>
+                </div>
+                <button class="p-card__add-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Лилия -->
+          <div class="p-card">
+            <div class="p-card__img-wrap">
+              <div class="p-card__img-ph" style="background:linear-gradient(145deg,#FFE8D0,#FFF3E8);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3C10 7 8 10 10 14M12 3C14 7 16 10 14 14M12 14v7" fill="rgba(240,150,80,.1)" stroke-linecap="round"/></svg>
+                <span>Лилия Восточная</span>
+              </div>
+              <div class="p-card__badge">
+                <span class="badge badge--available">В наличии</span>
+              </div>
+              <button class="p-card__fav">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </button>
+              <span class="p-card__country">🇪🇨 Эквадор</span>
+            </div>
+            <div class="p-card__body">
+              <div class="p-card__name">Лилия восточная</div>
+              <div class="p-card__meta">80 см · 10 стеблей в упаковке</div>
+              <div class="p-card__footer">
+                <div class="p-card__price-wrap">
+                  <span class="p-card__price">120 ₽ / стебель</span>
+                  <span class="p-card__min">мин. 10 шт.</span>
+                </div>
+                <button class="p-card__add-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Горшечный Фикус -->
+          <div class="p-card">
+            <div class="p-card__img-wrap">
+              <div class="p-card__img-ph" style="background:linear-gradient(145deg,#C8DCC0,#E0EDD8);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 20V10M12 10C12 10 7 8 6 4c3 0 6 2 6 6M12 10C12 10 17 8 18 4c-3 0-6 2-6 6" fill="rgba(90,138,90,.12)" stroke-linecap="round"/><rect x="9" y="18" width="6" height="3" rx="1" fill="rgba(120,80,60,.15)"/></svg>
+                <span>Фикус Бенджамина</span>
+              </div>
+              <div class="p-card__badge">
+                <span class="badge badge--available">В наличии</span>
+              </div>
+              <button class="p-card__fav">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </button>
+              <span class="p-card__country">🇨🇳 Китай</span>
+            </div>
+            <div class="p-card__body">
+              <div class="p-card__name">Фикус Бенджамина</div>
+              <div class="p-card__meta">Горшечный · Высота 50–70 см</div>
+              <div class="p-card__footer">
+                <div class="p-card__price-wrap">
+                  <span class="p-card__price">890 ₽ / шт.</span>
+                  <span class="p-card__min">мин. 5 шт.</span>
+                </div>
+                <button class="p-card__add-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Пион -->
+          <div class="p-card">
+            <div class="p-card__img-wrap">
+              <div class="p-card__img-ph" style="background:linear-gradient(145deg,#F8D4E0,#FDE8EF);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="9" r="5" fill="rgba(240,120,160,.12)"/><path d="M12 14v7M9 18l3 1 3-1" stroke-linecap="round"/></svg>
+                <span>Пион розовый</span>
+              </div>
+              <div class="p-card__badge">
+                <span class="badge badge--sale">Акция</span>
+              </div>
+              <button class="p-card__fav">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </button>
+              <span class="p-card__country">🇳🇱 Голландия</span>
+            </div>
+            <div class="p-card__body">
+              <div class="p-card__name">Пион розовый</div>
+              <div class="p-card__meta">50 см · 5 стеблей в упаковке</div>
+              <div class="p-card__footer">
+                <div class="p-card__price-wrap">
+                  <span class="p-card__price" style="color:var(--c-error);">220 ₽ <del style="font-size:.8rem;color:var(--c-text-light);font-weight:400;">290 ₽</del></span>
+                  <span class="p-card__min">мин. 5 шт.</span>
+                </div>
+                <button class="p-card__add-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Гвоздика -->
+          <div class="p-card">
+            <div class="p-card__img-wrap">
+              <div class="p-card__img-ph" style="background:linear-gradient(145deg,#FFD8D8,#FFE8E8);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3C9 5 8 8 10 11M12 3C15 5 16 8 14 11M11 11C9 13 9 16 12 18M13 11C15 13 15 16 12 18M12 18v3" fill="rgba(220,80,80,.1)" stroke-linecap="round"/></svg>
+                <span>Гвоздика Корональ</span>
+              </div>
+              <div class="p-card__badge">
+                <span class="badge badge--available">В наличии</span>
+              </div>
+              <button class="p-card__fav">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </button>
+              <span class="p-card__country">🇨🇴 Колумбия</span>
+            </div>
+            <div class="p-card__body">
+              <div class="p-card__name">Гвоздика Корональ</div>
+              <div class="p-card__meta">60 см · 20 стеблей в упаковке</div>
+              <div class="p-card__footer">
+                <div class="p-card__price-wrap">
+                  <span class="p-card__price">38 ₽ / стебель</span>
+                  <span class="p-card__min">мин. 20 шт.</span>
+                </div>
+                <button class="p-card__add-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Роза Белая -->
+          <div class="p-card">
+            <div class="p-card__img-wrap">
+              <div class="p-card__img-ph" style="background:linear-gradient(145deg,#EEF0F0,#F8F9F9);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0C17 6 12 2 12 2z" fill="rgba(180,180,180,.12)"/><path d="M12 10v10" stroke-linecap="round"/></svg>
+                <span>Роза Белая Лара</span>
+              </div>
+              <div class="p-card__badge">
+                <span class="badge badge--available">В наличии</span>
+              </div>
+              <button class="p-card__fav">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </button>
+              <span class="p-card__country">🇪🇨 Эквадор</span>
+            </div>
+            <div class="p-card__body">
+              <div class="p-card__name">Роза Белая Лара</div>
+              <div class="p-card__meta">70 см · 25 стеблей в упаковке</div>
+              <div class="p-card__footer">
+                <div class="p-card__price-wrap">
+                  <span class="p-card__price">95 ₽ / стебель</span>
+                  <span class="p-card__min">мин. 25 шт.</span>
+                </div>
+                <button class="p-card__add-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /shop__grid -->
+
+        <!-- Пагинация -->
+        <div class="shop__pagination">
+          <button class="page-btn page-btn--active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <span style="padding:0 8px; color:var(--c-text-light);">...</span>
+          <button class="page-btn">18</button>
+          <button class="page-btn" title="Следующая">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+
+      </div><!-- /shop__main -->
+    </div><!-- /shop__layout -->
+  </div><!-- /container -->
+</div><!-- /shop-page -->
+
+<!-- ── FOOTER ─────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <span class="footer__logo">ЦВЕТИ</span>
+        <p class="footer__tagline">Оптовая продажа цветов для бизнеса Дальнего Востока</p>
+      </div>
+      <div>
+        <div class="footer__col-title">Разделы</div>
+        <div class="footer__links">
+          <a href="shop.html"     class="footer__link">Биржа цветов</a>
+          <a href="delivery.html" class="footer__link">Условия и доставка</a>
+          <a href="news.html"     class="footer__link">Акции</a>
+          <a href="cabinet.html"  class="footer__link">Личный кабинет</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Контакты</div>
+        <div class="footer__links">
+          <span class="footer__link">+7 (423) 212-34-56</span>
+          <span class="footer__link">info@cveti.ru</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Документы</div>
+        <div class="footer__links">
+          <a href="#" class="footer__link">Политика конфиденциальности</a>
+          <a href="#" class="footer__link">Публичная оферта</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2024 ЦВЕТИ. Все права защищены.</span>
+      <div class="footer__legal">
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Публичная оферта</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
